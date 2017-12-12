@@ -18,6 +18,7 @@ class PasswordController extends Controller
     {
         $passwords = new Password();
         $data['pageHeader'] = 'Passwords';
+        $data['route_path'] = 'passwords.create';
         $data['listHeader'] = ['Host'=>'host', 'User Name'=> 'user_name', 'Password' => 'password', 'Description' => 'description'];
         $data['listBody'] = $passwords->getList();
         return view('listView', $data);
@@ -30,7 +31,7 @@ class PasswordController extends Controller
      */
     public function create()
     {
-        $data['action'] = '/passwords';
+        $data['route_path'] = 'passwords.create';
         return view('forms.create_record', $data);
     }
 

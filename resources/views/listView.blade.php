@@ -1,7 +1,7 @@
 <table width="80%" align="center"><tr><td>
 	<u><b>{{ $pageHeader }}</b></u>
 	<span style="float:right">
-		<a href="{{ route('passwords.create') }}"><button>Add New</button></a>
+		<a href="{{ route($route_path) }}"><button>Add New</button></a>
 	</span>
 	<hr>
 </td></tr>

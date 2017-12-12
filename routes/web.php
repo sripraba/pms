@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Route::resource('/passwords', 'PasswordController');
+Route::resource('/hostings', 'HostingController');
 
 Auth::routes();
 

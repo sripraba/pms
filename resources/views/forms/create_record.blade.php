@@ -1,4 +1,4 @@
-{{ Form::open(['route'=>'passwords.store']) }}
+{{ Form::open(['route'=>$route_path]) }}
 	<center>
 		<table>
 			<tr>
