@@ -48,7 +48,6 @@ License: You must have a valid license purchased only from themeforest(the above
         <!-- END THEME LAYOUT STYLES -->
         <link rel="shortcut icon" href="favicon.ico" /> </head>
     <!-- END HEAD -->
-
     <body class=" login">
         <!-- BEGIN : LOGIN PAGE 5-1 -->
         <div class="user-login-5">

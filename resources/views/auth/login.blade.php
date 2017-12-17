@@ -28,25 +28,26 @@ License: You must have a valid license purchased only from themeforest(the above
         <meta content="" name="author" />
         <!-- BEGIN GLOBAL MANDATORY STYLES -->
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
-        <link href="{{ asset('global/plugins/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
-        <link href="{{ asset('global/plugins/simple-line-icons/simple-line-icons.min.css') }}" rel="stylesheet" type="text/css" />
-        <link href="{{ asset('global/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
-        <link href="{{ asset('global/plugins/bootstrap-switch/css/bootstrap-switch.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('metronic/global/plugins/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('metronic/global/plugins/simple-line-icons/simple-line-icons.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('metronic/global/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('metronic/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css') }}" rel="stylesheet" type="text/css" />
         <!-- END GLOBAL MANDATORY STYLES -->
         <!-- BEGIN PAGE LEVEL PLUGINS -->
-        <link href="{{ asset('global/plugins/select2/css/select2.min.css') }}" rel="stylesheet" type="text/css" />
-        <link href="{{ asset('global/plugins/select2/css/select2-bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('metronic/global/plugins/select2/css/select2.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('metronic/global/plugins/select2/css/select2-bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
         <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN THEME GLOBAL STYLES -->
-        <link href="{{ asset('global/css/components.min.css') }}" rel="stylesheet" id="style_components" type="text/css" />
-        <link href="{{ asset('global/css/plugins.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('metronic/global/css/components.min.css') }}" rel="stylesheet" id="style_components" type="text/css" />
+        <link href="{{ asset('metronic/global/css/plugins.min.css') }}" rel="stylesheet" type="text/css" />
         <!-- END THEME GLOBAL STYLES -->
         <!-- BEGIN PAGE LEVEL STYLES -->
-        <link href="{{ asset('pages/css/login-5.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('metronic/pages/css/login-5.min.css') }}" rel="stylesheet" type="text/css" />
         <!-- END PAGE LEVEL STYLES -->
         <!-- BEGIN THEME LAYOUT STYLES -->
         <!-- END THEME LAYOUT STYLES -->
-        <link rel="shortcut icon" href="favicon.ico" /> </head>
+        <link rel="shortcut icon" href="favicon.ico" /> 
+    </head>
     <!-- END HEAD -->
 
     <body class=" login">
@@ -54,13 +55,10 @@ License: You must have a valid license purchased only from themeforest(the above
         <div class="user-login-5">
             <div class="row bs-reset">
                 <div class="col-md-6 bs-reset mt-login-5-bsfix">
-                    <div class="login-bg" style="background-image:url({{ asset('pages/img/login/bg1.jpg') }})">
-                        <img class="login-logo" src="{{ asset('pages/img/login/logo.png') }}" /> </div>
+                    <div class="login-bg" style="background-image:url({{ asset('metronic/pages/img/login/bg1.jpg') }})"></div>
                 </div>
-                <div class="col-md-6 login-container bs-reset mt-login-5-bsfix">
+                <div class="col-md-6 login-container bs-reset mt-login-4-bsfix">
                     <div class="login-content">
-                        <h1>Metronic Admin Login</h1>
-                        <p> Lorem ipsum dolor sit amet, coectetuer adipiscing elit sed diam nonummy et nibh euismod aliquam erat volutpat. Lorem ipsum dolor sit amet, coectetuer adipiscing. </p>
                         <form action="{{ route('login') }}" class="login-form" method="post">
                             {{ csrf_field() }}
                             <div class="alert alert-danger display-hide">
@@ -69,7 +67,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             </div>
                             <div class="row">
                                 <div class="col-xs-6">
-                                    <input id="email" type="email" class="form-control form-control-solid placeholder-no-fix form-group" name="email" value="{{ old('email') }}" required autofocus>
+                                    <input id="username" type="text" class="form-control form-control-solid placeholder-no-fix form-group" name="username" value="{{ old('username') }}" placeholder="User Name" required autofocus>
                                     @if ($errors->has('email'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('email') }}</strong>
@@ -78,7 +76,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                    
                                 </div>
                                 <div class="col-xs-6">
-                                    <input id="password" type="password" class="form-control form-control-solid placeholder-no-fix form-group" name="password" required>
+                                    <input id="password" type="password" class="form-control form-control-solid placeholder-no-fix form-group" name="password"  placeholder="Password" required>
                                     @if ($errors->has('password'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('password') }}</strong>
@@ -141,7 +139,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             </div>
                             <div class="col-xs-7 bs-reset">
                                 <div class="login-copyright text-right">
-                                    <p>Copyright &copy; Keenthemes 2015</p>
+                                    <p>Copyright &copy; <a target="_bank" href="{{ url('http://spiffysofts.com') }}">Spiffy Softs</a> {{ date('Y') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -151,24 +149,27 @@ License: You must have a valid license purchased only from themeforest(the above
         </div>
         <!-- END : LOGIN PAGE 5-1 -->
         <!-- BEGIN CORE PLUGINS -->
-        <script src="{{ asset('global/plugins/jquery.min.js') }}" type="text/javascript"></script>
-        <script src="{{ asset('global/plugins/bootstrap/js/bootstrap.min.js') }}" type="text/javascript"></script>
-        <script src="{{ asset('global/plugins/js.cookie.min.js') }}" type="text/javascript"></script>
-        <script src="{{ asset('global/plugins/jquery-slimscroll/jquery.slimscroll.min.js') }}" type="text/javascript"></script>
-        <script src="{{ asset('global/plugins/jquery.blockui.min.js') }}" type="text/javascript"></script>
-        <script src="{{ asset('global/plugins/bootstrap-switch/js/bootstrap-switch.min.js') }}" type="text/javascript"></script>
+         <script type="text/javascript">
+            var assetBaseUrl = "{{ asset('') }}";
+        </script>
+        <script src="{{ asset('metronic/global/plugins/jquery.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('metronic/global/plugins/bootstrap/js/bootstrap.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('metronic/global/plugins/js.cookie.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('metronic/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('metronic/global/plugins/jquery.blockui.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('metronic/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js') }}" type="text/javascript"></script>
         <!-- END CORE PLUGINS -->
         <!-- BEGIN PAGE LEVEL PLUGINS -->
-        <script src="{{ asset('global/plugins/jquery-validation/js/jquery.validate.min.js') }}" type="text/javascript"></script>
-        <script src="{{ asset('global/plugins/jquery-validation/js/additional-methods.min.js') }}" type="text/javascript"></script>
-        <script src="{{ asset('global/plugins/select2/js/select2.full.min.js') }}" type="text/javascript"></script>
-        <script src="{{ asset('global/plugins/backstretch/jquery.backstretch.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('metronic/global/plugins/jquery-validation/js/jquery.validate.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('metronic/global/plugins/jquery-validation/js/additional-methods.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('metronic/global/plugins/select2/js/select2.full.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('metronic/global/plugins/backstretch/jquery.backstretch.min.js') }}" type="text/javascript"></script>
         <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN THEME GLOBAL SCRIPTS -->
-        <script src="{{ asset('global/scripts/app.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('metronic/global/scripts/app.min.js') }}" type="text/javascript"></script>
         <!-- END THEME GLOBAL SCRIPTS -->
         <!-- BEGIN PAGE LEVEL SCRIPTS -->
-        <script src="{{ asset('pages/scripts/login-5.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('metronic/pages/scripts/login-5.min.js') }}" type="text/javascript"></script>
         <!-- END PAGE LEVEL SCRIPTS -->
         <!-- BEGIN THEME LAYOUT SCRIPTS -->
         <!-- END THEME LAYOUT SCRIPTS -->

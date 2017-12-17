@@ -125,7 +125,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="page_user_login_1.html">
+                                        <a href="{{ route('logout') }}">
                                             <i class="icon-key"></i> Log Out </a>
                                     </li>
                                 </ul>

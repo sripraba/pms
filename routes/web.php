@@ -11,8 +11,11 @@
 |
 */
 Route::middleware(['auth'])->group(function () {
-	Route::get('/', 'HomeController@dashboard')->name('index');
-	Route::get('/home', 'HomeController@dashboard')->name('home');
+	Route::get('/logout', function(){
+		auth()->logout();
+		return redirect('/');
+	});
+	Route::get('/', 'HomeController@dashboard')->name('home');
 	Route::resource('/passwords', 'PasswordController');
 	Route::resource('/hostings', 'HostingController');
 });
