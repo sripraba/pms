@@ -21,7 +21,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
     <head>
         <meta charset="utf-8" />
-        <title>Metronic Admin Theme #6 | User Login 5</title>
+        <title>PMS - Sripraba</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta content="Preview page of Metronic Admin Theme #6 for " name="description" />
@@ -46,7 +46,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <!-- END PAGE LEVEL STYLES -->
         <!-- BEGIN THEME LAYOUT STYLES -->
         <!-- END THEME LAYOUT STYLES -->
-        <link rel="shortcut icon" href="favicon.ico" /> 
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" /> 
     </head>
     <!-- END HEAD -->
 
