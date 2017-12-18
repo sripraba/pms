@@ -1,4 +1,11 @@
-{{ Form::model($record,['method' => 'PATCH', 'route' => ['passwords.update', $record['id']]]) }}
+@extends('base')
+@section('title', 'Password');
+@section('pagehomelink', 'passwords');
+@section('pagehometitle', 'Password');
+@section('pagetitle', 'Password');
+@section('content')
+<div class="page-fixed-main-content">
+	{{ Form::model($record,['method' => 'PATCH', 'route' => ['passwords.update', $record['id']]]) }}
 	<center>
 		<table>
 			<tr>
@@ -24,3 +31,5 @@
 	</center>
 </form>
 {{ Form::close() }}
+</div>
+@endsection

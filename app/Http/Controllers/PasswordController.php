@@ -31,7 +31,7 @@ class PasswordController extends Controller
      */
     public function create()
     {
-        $data['route_path'] = 'passwords.create';
+        $data['action'] = 'passwords.store';
         return view('forms.create_record', $data);
     }
 

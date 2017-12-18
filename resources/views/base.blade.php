@@ -50,7 +50,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <link href="{{ asset('metronic/layouts/layout6/css/layout.min.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('metronic/layouts/layout6/css/custom.min.css') }}" rel="stylesheet" type="text/css" />
         <!-- END THEME LAYOUT STYLES -->
-        <link rel="shortcut icon" href="favicon.ico" /> </head>
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" /> </head>
     <!-- END HEAD -->
 
     <body class="">

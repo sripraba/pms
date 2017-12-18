@@ -1,6 +1,12 @@
-{{ Form::open(['route'=>$route_path]) }}
-	<center>
-		<table>
+@extends('base')
+@section('title', 'Password');
+@section('pagehomelink', 'passwords');
+@section('pagehometitle', 'Password');
+@section('pagetitle', 'Password');
+@section('content')
+<div class="page-fixed-main-content">
+{{ Form::open(['route'=>$action]) }}
+		<table class="table table-bordered table-stripped">
 			<tr>
 				<th>{{ Form::label('host', 'Host :')}}</th>
 				<td>{{ Form::text('host', null)}}</td>
@@ -21,6 +27,6 @@
 				{{ Form::submit('Create') }}
 			</td></tr>
 		</table>
-	</center>
-</form>
 {{ Form::close() }}
+</div>
+@endsection
