@@ -1,14 +1,14 @@
 @extends('base')
-@section('title', 'Password');
-@section('pagehomelink', route('passwords.index'));
-@section('pagehometitle', 'Password');
-@section('pagetitle', 'Password');
+@section('title', $properties['title']);
+@section('pagehomelink', route($properties['pagehomelink']));
+@section('pagehometitle', $properties['pagehometitle']);
+@section('pagetitle', $properties['pagetitle']);
 @section('content')
 <div class="page-fixed-main-content">
 	<div class="portlet box green">
         <div class="portlet-title">
             <div class="caption">
-                <i class="fa fa-comments"></i>Striped Table </div>
+                <i class="{{ $properties['icon'] }}"></i> {{ $properties['title'] }}</div>
             <div class="tools">
                 <a href="javascript:;" class="collapse" data-original-title="" title=""> </a>
                 <a href="javascript:;" class="reload" data-original-title="" title=""> </a>

@@ -61,7 +61,7 @@ License: You must have a valid license purchased only from themeforest(the above
                     <div class="havbar-header">
                         <!-- BEGIN LOGO -->
                         <a id="index" class="navbar-brand" href="start.html">
-                            <img src="{{ asset('metronic/layouts/layout6/img/logo.png') }}" alt="Logo"> </a>
+                            <img src="{{ asset('logo.png') }}" alt="Logo"> </a>
                         <!-- END LOGO -->
                         <!-- BEGIN TOPBAR ACTIONS -->
                         <div class="topbar-actions">
@@ -77,42 +77,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                             </form>
                             <!-- END HEADER SEARCH BOX -->
-                            <!-- BEGIN GROUP NOTIFICATION -->
-                            <div class="btn-group-notification btn-group" id="header_notification_bar">
-                                <button type="button" class="btn md-skip dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                    <span class="badge">9</span>
-                                </button>
-                                <ul class="dropdown-menu-v2">
-                                    <li class="external">
-                                        <h3>
-                                            <span class="bold">12 pending</span> notifications</h3>
-                                        <a href="#">view all</a>
-                                    </li>
-                                    <li>
-                                        <ul class="dropdown-menu-list scroller" style="height: 250px; padding: 0;" data-handle-color="#637283">
-                                            <li>
-                                                <a href="javascript:;">
-                                                    <span class="details">
-                                                        <span class="label label-sm label-icon label-success md-skip">
-                                                            <i class="fa fa-plus"></i>
-                                                        </span> New user registered. </span>
-                                                    <span class="time">just now</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:;">
-                                                    <span class="details">
-                                                        <span class="label label-sm label-icon label-danger md-skip">
-                                                            <i class="fa fa-bolt"></i>
-                                                        </span> Server #12 overloaded. </span>
-                                                    <span class="time">3 mins</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- END GROUP NOTIFICATION -->
+                            
                             <!-- BEGIN USER PROFILE -->
                             <div class="btn-group-img btn-group">
                                 <button type="button" class="btn btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
@@ -177,19 +142,10 @@ License: You must have a valid license purchased only from themeforest(the above
                  @yield('content')
 
                     <!-- BEGIN FOOTER -->
-                <p class="copyright-v2"> 2016 &copy; Metronic Theme By
-                    <a target="_blank" href="http://keenthemes.com">Keenthemes</a> &nbsp;|&nbsp;
-                    <a href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">Purchase Metronic!</a>
+                <p class="copyright-v2"> {{ date('Y') }} &copy; 
+                    <a target="_blank" href="http://spiffysofts.com">Spiffysofts</a>
                 </p>
-                <!-- BEGIN QUICK SIDEBAR TOGGLER -->
-                <button type="button" class="quick-sidebar-toggler" data-toggle="collapse">
-                    <span class="sr-only">Toggle Quick Sidebar</span>
-                    <i class="icon-logout"></i>
-                    <div class="quick-sidebar-notification">
-                        <span class="badge badge-danger">7</span>
-                    </div>
-                </button>
-                <!-- END QUICK SIDEBAR TOGGLER -->
+                
                 <a href="#index" class="go2top">
                     <i class="icon-arrow-up"></i>
                 </a>

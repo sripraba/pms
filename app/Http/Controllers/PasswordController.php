@@ -20,6 +20,8 @@ class PasswordController extends Controller
         $data['pageHeader'] = 'Passwords';
         $data['route_path'] = 'passwords.create';
         $data['listHeader'] = ['Host'=>'host', 'User Name'=> 'user_name', 'Password' => 'password', 'Description' => 'description'];
+        $data['properties'] = $passwords->getProperties();
+        $data['properties']['pagetitle'] = 'List';
         $data['listBody'] = $passwords->getList();
         return view('listView', $data);
     }
